@@ -69,6 +69,7 @@
                                                             <i data-feather="chevron-down" width="20" height="20" class="d-inline-block d-lg-none"></i>
                                                         <?php endif; ?>
                                                     </a>
+                                                    
 
                                                     <?php if(!empty($category->subCategories) and count($category->subCategories)): ?>
                                                         <ul class="sub-menu" data-simplebar <?php if((!empty($isRtl) and $isRtl)): ?> data-simplebar-direction="rtl" <?php endif; ?>>
@@ -103,6 +104,10 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     <?php endif; ?>
                 </ul>
+                <button class="bd-none d-lg-flex btn btn-sm btn-primary nav-start-a-live-btn" onclick="window.location.href='/exams';">
+        <i data-feather="edit" width="20" height="20" class="mr-5"></i> <?php echo e(trans('navbar.exam')); ?>
+
+    </button>
             </div>
 
             <div class="nav-icons-or-start-live navbar-order d-flex align-items-center justify-content-end">

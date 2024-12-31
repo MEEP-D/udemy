@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\ExamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -231,7 +232,10 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::group(['prefix' => 'search'], function () {
         Route::get('/', 'SearchController@index');
     });
+/////
 
+   
+    
     Route::group(['prefix' => 'tags'], function () {
         Route::get('/{type}/{tag}', 'TagsController@index');
     });
@@ -399,5 +403,6 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::get('/forms/{url}', 'FormsController@index');
     Route::post('/forms/{url}/store', 'FormsController@store');
 
+    Route::get('/exams', 'ExamController@index');
 });
 
